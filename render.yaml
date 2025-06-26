@@ -1,0 +1,17 @@
+# Exported from Render on 2025-06-26T10:58:00Z
+services:
+- type: web
+  name: raganork-md
+  runtime: docker
+  repo: https://github.com/souravkl11/raganork-md
+  plan: free
+  envVars:
+  - key: SUDO
+    sync: false
+  - key: SESSION
+    sync: false
+  region: oregon
+  dockerContext: .
+  dockerfilePath: ./Dockerfile
+  autoDeployTrigger: commit
+version: "1"
